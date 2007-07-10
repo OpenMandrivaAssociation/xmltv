@@ -169,19 +169,19 @@ This package contains the swiss grabbers for xmltv.
 %{_mandir}/man1/tv_grab_ch_bluewin*.1*
 %{_datadir}/xmltv/tv_grab_ch_bluewin/channel_ids
 
-%package	grabbers-de
-Summary:	German grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#package	grabbers-de
+#Summary:	German grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-de
-This package contains the german grabbers for xmltv.
+#description grabbers-de
+#This package contains the german grabbers for xmltv.
 
-%files grabbers-de
-%defattr(-,root,root)
-%{_bindir}/tv_grab_de*
-%{_mandir}/man1/tv_grab_de*.1*
-%{_datadir}/xmltv/tv_grab_de_tvtoday
+#files grabbers-de
+#defattr(-,root,root)
+#{_bindir}/tv_grab_de*
+#{_mandir}/man1/tv_grab_de*.1*
+#{_datadir}/xmltv/tv_grab_de_tvtoday
 
 %package	grabbers-dk
 Summary:	Danish grabbers for xmltv
