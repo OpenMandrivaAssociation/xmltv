@@ -112,6 +112,19 @@ This package contains the perl modules from xmltv.
 %{perl_vendorlib}/XMLTV
 %{_mandir}/man3/*
 
+%package	grabbers-ar
+Summary:	Argentenian grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
+
+%description grabbers-ar
+This package contains the argentinian grabbers for xmltv.
+
+%files grabbers-ar
+%defattr(-,root,root)
+%{_bindir}/tv_grab_ar
+%{_mandir}/man1/tv_grab_ar*.1*
+
 #package	grabbers-au
 #Summary:	Australian grabbers for xmltv
 #Group:		Video
@@ -165,9 +178,23 @@ This package contains the swiss grabbers for xmltv.
 
 %files grabbers-ch
 %defattr(-,root,root)
-%{_bindir}/tv_grab_ch_bluewin
-%{_mandir}/man1/tv_grab_ch_bluewin*.1*
-%{_datadir}/xmltv/tv_grab_ch_bluewin/channel_ids
+%{_bindir}/tv_grab_ch_*
+%{_mandir}/man1/tv_grab_ch_*.1*
+%{_datadir}/xmltv/tv_grab_ch_*/channel_ids
+
+%package	grabbers-combiner
+Summary:	Grabber to grab data from multiple grabbers at once
+Group:		Video
+Provides:	xmltv-grabbers
+
+%description grabbers-combineA
+This package contains a grabber to grab data from multiple grabbers at once.
+
+%files grabbers-combiner
+%defattr(-,root,root)
+%{_bindir}/tv_grab_combiner
+%{_mandir}/man1/tv_grab_combiner.1*
+%{_datadir}/xmltv/tv_grab_ch_*/channel_ids
 
 #package	grabbers-de
 #Summary:	German grabbers for xmltv
@@ -195,6 +222,19 @@ This package contains the danish grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_dk
 %{_mandir}/man1/tv_grab_dk.1*
+
+%package	grabbers-dtv_la
+Summary:	Latin American grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
+
+%description grabbers-dtv_la
+This package contains the latin american grabbers for xmltv.
+
+%files grabbers-dtv_la
+%defattr(-,root,root)
+%{_bindir}/tv_grab_dtv_la
+%{_mandir}/man1/tv_grab_dtv_la.1*
 
 %package	grabbers-ee
 Summary:	Estonian grabbers for xmltv
@@ -344,6 +384,19 @@ This package contains the north-american grabbers for xmltv.
 %{_bindir}/tv_grab_na*
 %{_mandir}/man1/tv_grab_na*.1*
 
+%package	grabbers-nc
+Summary:	Nouvelle Caledonie (France) grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
+
+%description grabbers-nc
+This package contains the nouvelle caledonie (france) grabbers for xmltv.
+
+%files grabbers-nc
+%defattr(-,root,root)
+%{_bindir}/tv_grab_nc
+%{_mandir}/man1/tv_grab_nc.1*
+
 %package	grabbers-nl
 Summary:	Dutch grabbers for xmltv
 Group:		Video
@@ -367,8 +420,8 @@ This package contains the norwegian grabbers for xmltv.
 
 %files grabbers-no
 %defattr(-,root,root)
-%{_bindir}/tv_grab_no
-%{_mandir}/man1/tv_grab_no.1*
+%{_bindir}/tv_grab_no*
+%{_mandir}/man1/tv_grab_no*.1*
 
 %package	grabbers-pt
 Summary:	Portugese grabbers for xmltv
