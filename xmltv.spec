@@ -221,7 +221,6 @@ This package contains the spanish grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_es*
 %{_mandir}/man1/tv_grab_es*.1*
-%{_datadir}/xmltv/tv_grab_de_tvtoday
 
 %package	grabbers-fi
 Summary:	Finish grabbers for xmltv
