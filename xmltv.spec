@@ -1,6 +1,6 @@
 %define name	xmltv
-%define version 0.5.45
-%define release %mkrel 2
+%define version 0.5.46
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -470,7 +470,7 @@ Convert XML to the potatoe guide view tool.
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch1 -p1
+#patch1 -p1
 %patch2 -p0
 #patch3 -p1 -n .nl_default_days
 %patch4 -p0
