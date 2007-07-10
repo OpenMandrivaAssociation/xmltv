@@ -187,7 +187,7 @@ Summary:	Grabber to grab data from multiple grabbers at once
 Group:		Video
 Provides:	xmltv-grabbers
 
-%description grabbers-combineA
+%description grabbers-combiner
 This package contains a grabber to grab data from multiple grabbers at once.
 
 %files grabbers-combiner
