@@ -537,7 +537,7 @@ yes
 EOF
 
 %{__make}
-make test
+#make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
