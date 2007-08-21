@@ -1,5 +1,5 @@
 %define name	xmltv
-%define version 0.5.47
+%define version 0.5.48
 %define release %mkrel 1
 
 Name:		%{name}
