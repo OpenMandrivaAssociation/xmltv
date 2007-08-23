@@ -1,6 +1,6 @@
 %define name	xmltv
 %define version 0.5.48
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -8,7 +8,6 @@ Release:	%{release}
 Summary:	A set of utilities to manage your TV viewing
 URL:		http://membled.com/work/apps/xmltv/
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-Source1:	tv_grab_be	
 Patch1:		xmltv-0.5.38-de.patch
 Patch2:		xmltv-0.5.39-jp-utf8.patch
 Patch3:		xmltv-0.5.40-nl_default_days.patch
@@ -542,7 +541,6 @@ EOF
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-install %SOURCE1 $RPM_BUILD_ROOT/%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
