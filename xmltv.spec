@@ -1,6 +1,6 @@
 %define name	xmltv
-%define version 0.5.48
-%define release %mkrel 2
+%define version 0.5.49
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -163,7 +163,7 @@ This package contains the brazillian grabbers for xmltv.
 
 %files grabbers-br
 %defattr(-,root,root)
-%{_bindir}/tv_grab_br
+#{_bindir}/tv_grab_br
 %{_bindir}/tv_grab_br_net
 %{_mandir}/man1/tv_grab_br*.1*
 
@@ -330,18 +330,18 @@ This package contains the israeli grabbers for xmltv.
 %{_bindir}/tv_grab_il*
 %{_mandir}/man1/tv_grab_il*.1*
 
-%package	grabbers-is
-Summary:	Icelandic grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#package	grabbers-is
+#Summary:	Icelandic grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-is
-This package contains the icelandic grabbers for xmltv.
+#description grabbers-is
+#This package contains the icelandic grabbers for xmltv.
 
-%files grabbers-is
-%defattr(-,root,root)
-%{_bindir}/tv_grab_is*
-%{_mandir}/man1/tv_grab_is*.1*
+#files grabbers-is
+#defattr(-,root,root)
+#{_bindir}/tv_grab_is*
+#{_mandir}/man1/tv_grab_is*.1*
 
 %package	grabbers-it
 Summary:	Italian grabbers for xmltv
