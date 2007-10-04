@@ -8,13 +8,8 @@ Release:	%{release}
 Summary:	A set of utilities to manage your TV viewing
 URL:		http://membled.com/work/apps/xmltv/
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-Patch1:		xmltv-0.5.38-de.patch
 Patch2:		xmltv-0.5.39-jp-utf8.patch
-Patch3:		xmltv-0.5.40-nl_default_days.patch
 Patch4:		xmltv-0.5.42-Makefile.patch
-# (fc) 0.5.42-4mdk fix french grabber (from CVS)
-Patch5:		xmltv-0.5.42-frcvs.patch
-Patch6:		xmltv-0.5.42-nl_fix.patch
 Patch7:		xmltv-0.5.3-None.pm_strict.patch
 License:	GPL
 Group:		Video
@@ -521,12 +516,8 @@ Convert XML to the potatoe guide view tool.
 
 %prep
 %setup -q -n %{name}-%{version}
-#patch1 -p1
 %patch2 -p0
-#patch3 -p1 -n .nl_default_days
 %patch4 -p0
-#patch5 -p1 -b .frcvs
-#patch6 -p1 -b .nl_fix
 %patch7 -p1 -b .strict
 
 %build
