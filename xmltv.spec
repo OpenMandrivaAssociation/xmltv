@@ -27,10 +27,10 @@ BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-libwww-perl => 5.65
 BuildRequires:	perl-Lingua-Preferred
 BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
-BuildRequires:	perl-Locale-Hebrew
 BuildRequires:	perl-SOAP-Lite
 BuildRequires:	perl-Term-ProgressBar >= 2.03
 BuildRequires:	perl-Term-ReadKey
+BuildRequires:	perl-Text-Bidi
 BuildRequires:	perl-Text-Kakasi
 BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
