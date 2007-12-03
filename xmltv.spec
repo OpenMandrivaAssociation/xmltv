@@ -30,7 +30,7 @@ BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
 BuildRequires:	perl-SOAP-Lite
 BuildRequires:	perl-Term-ProgressBar >= 2.03
 BuildRequires:	perl-Term-ReadKey
-BuildRequires:	perl-Text-Bidi
+#BuildRequires:	perl-Text-Bidi
 BuildRequires:	perl-Text-Kakasi
 BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
