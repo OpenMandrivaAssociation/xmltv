@@ -312,18 +312,18 @@ This package contains the hungarian-romanian grabbers for xmltv.
 %{_datadir}/xmltv/tv_grab_huro/catmap.hu
 %{_datadir}/xmltv/tv_grab_huro/catmap.ro
 
-%package	grabbers-il
-Summary:	Israeli grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#package	grabbers-il
+#Summary:	Israeli grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-il
-This package contains the israeli grabbers for xmltv.
+#description grabbers-il
+#This package contains the israeli grabbers for xmltv.
 
-%files grabbers-il
-%defattr(-,root,root)
-%{_bindir}/tv_grab_il*
-%{_mandir}/man1/tv_grab_il*.1*
+#files grabbers-il
+#defattr(-,root,root)
+#{_bindir}/tv_grab_il*
+#{_mandir}/man1/tv_grab_il*.1*
 
 #package	grabbers-is
 #Summary:	Icelandic grabbers for xmltv
