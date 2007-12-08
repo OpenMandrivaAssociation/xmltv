@@ -268,7 +268,7 @@ This package contains the european grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_eu_epgdata
 %{_mandir}/man1/tv_grab_eu_epgdata.1.lzma
-%{_datadir}/xmltv/e/re/xmltv/tv_grab_eu_epgdata/channel_ids
+%{_datadir}/xmltv/tv_grab_eu_epgdata/channel_ids
 
 %package	grabbers-fi
 Summary:	Finish grabbers for xmltv
