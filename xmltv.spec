@@ -256,6 +256,17 @@ This package contains the spanish grabbers for xmltv.
 %{_bindir}/tv_grab_es*
 %{_mandir}/man1/tv_grab_es*.1*
 
+%package	grabbers-eu
+Summary:	European grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
+
+%files grabbers-eu
+%defattr(-,root,root)
+%{_bindir}/tv_grab_eu_epgdata
+%{_mandir}/man1/tv_grab_eu_epgdata.1.lzma
+%{_datadir}/xmltv/e/re/xmltv/tv_grab_eu_epgdata/channel_ids
+
 %package	grabbers-fi
 Summary:	Finish grabbers for xmltv
 Group:		Video
