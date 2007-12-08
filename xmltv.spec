@@ -261,6 +261,9 @@ Summary:	European grabbers for xmltv
 Group:		Video
 Provides:	xmltv-grabbers
 
+%description grabbers-eu
+This package contains the european grabbers for xmltv.
+
 %files grabbers-eu
 %defattr(-,root,root)
 %{_bindir}/tv_grab_eu_epgdata
