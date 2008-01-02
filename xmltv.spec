@@ -14,6 +14,7 @@ Patch7:		xmltv-0.5.3-None.pm_strict.patch
 License:	GPL
 Group:		Video
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:	perl-DateManip => 5.42
