@@ -392,18 +392,18 @@ This package contains the north-american grabbers for xmltv.
 %{_bindir}/tv_grab_na*
 %{_mandir}/man1/tv_grab_na*.1*
 
-%package	grabbers-nc
-Summary:	Nouvelle Caledonie (France) grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#package	grabbers-nc
+#Summary:	Nouvelle Caledonie (France) grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-nc
-This package contains the nouvelle caledonie (france) grabbers for xmltv.
+#description grabbers-nc
+#This package contains the nouvelle caledonie (france) grabbers for xmltv.
 
-%files grabbers-nc
-%defattr(-,root,root)
-%{_bindir}/tv_grab_nc
-%{_mandir}/man1/tv_grab_nc.1*
+#files grabbers-nc
+#defattr(-,root,root)
+#{_bindir}/tv_grab_nc
+#{_mandir}/man1/tv_grab_nc.1*
 
 %package	grabbers-nl
 Summary:	Dutch grabbers for xmltv
