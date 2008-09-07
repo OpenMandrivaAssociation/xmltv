@@ -1,6 +1,6 @@
 %define name	xmltv
-%define version 0.5.51
-%define release %mkrel 4
+%define version 0.5.53
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -36,7 +36,9 @@ BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
 BuildRequires:	perl-Unicode-UTF8simple
 BuildRequires:	perl-WWW-Mechanize >= 1.02
+BuildRequires:	perl-XML-DOM
 BuildRequires:	perl-XML-LibXML
+BuildRequires:	perl-XML-LibXSLT
 BuildRequires:	perl-XML-Simple
 BuildRequires:	perl-XML-Twig => 3.09
 BuildRequires:	perl-XML-Writer >= 0.4.6
@@ -116,7 +118,9 @@ This package contains the argentinian grabbers for xmltv.
 
 %files grabbers-ar
 %defattr(-,root,root)
+%{_bindir}/tv_extractinfo_ar
 %{_bindir}/tv_grab_ar
+%{_mandir}/man1/tv_extractinfo_ar*.1*
 %{_mandir}/man1/tv_grab_ar*.1*
 
 #package	grabbers-au
@@ -214,8 +218,8 @@ This package contains the danish grabbers for xmltv.
 
 %files grabbers-dk
 %defattr(-,root,root)
-%{_bindir}/tv_grab_dk
-%{_mandir}/man1/tv_grab_dk.1*
+%{_bindir}/tv_grab_dk_dr
+%{_mandir}/man1/tv_grab_dk_dr.1*
 
 %package	grabbers-dtv_la
 Summary:	Latin American grabbers for xmltv
@@ -339,18 +343,18 @@ This package contains the hungarian-romanian grabbers for xmltv.
 #{_bindir}/tv_grab_il*
 #{_mandir}/man1/tv_grab_il*.1*
 
-#package	grabbers-is
-#Summary:	Icelandic grabbers for xmltv
-#Group:		Video
-#Provides:	xmltv-grabbers
+%package	grabbers-is
+Summary:	Icelandic grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
 
-#description grabbers-is
-#This package contains the icelandic grabbers for xmltv.
+%description grabbers-is
+This package contains the icelandic grabbers for xmltv.
 
-#files grabbers-is
-#defattr(-,root,root)
-#{_bindir}/tv_grab_is*
-#{_mandir}/man1/tv_grab_is*.1*
+%files grabbers-is
+%defattr(-,root,root)
+%{_bindir}/tv_grab_is*
+%{_mandir}/man1/tv_grab_is*.1*
 
 %package	grabbers-it
 Summary:	Italian grabbers for xmltv
@@ -405,18 +409,18 @@ This package contains the north-american grabbers for xmltv.
 #{_bindir}/tv_grab_nc
 #{_mandir}/man1/tv_grab_nc.1*
 
-%package	grabbers-nl
-Summary:	Dutch grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#%package	grabbers-nl
+#Summary:	Dutch grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-nl
-This package contains the dutch grabbers for xmltv.
+#description grabbers-nl
+#This package contains the dutch grabbers for xmltv.
 
-%files grabbers-nl
-%defattr(-,root,root)
-%{_bindir}/tv_grab_nl*
-%{_mandir}/man1/tv_grab_nl*.1*
+#files grabbers-nl
+#defattr(-,root,root)
+#{_bindir}/tv_grab_nl*
+#{_mandir}/man1/tv_grab_nl*.1*
 
 %package	grabbers-no
 Summary:	Norwegian grabbers for xmltv
