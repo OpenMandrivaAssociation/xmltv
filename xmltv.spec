@@ -6,7 +6,8 @@ Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	A set of utilities to manage your TV viewing
-URL:		http://membled.com/work/apps/xmltv/
+#URL:		http://membled.com/work/apps/xmltv/
+URL:		http://wiki.xmltv.org
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch2:		xmltv-0.5.39-jp-utf8.patch
 Patch4:		xmltv-0.5.42-Makefile.patch
