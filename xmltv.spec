@@ -12,7 +12,7 @@ Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch2:		xmltv-0.5.39-jp-utf8.patch
 Patch4:		xmltv-0.5.42-Makefile.patch
 Patch7:		xmltv-0.5.3-None.pm_strict.patch
-License:	GPL
+License:	GPLv2+
 Group:		Video
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-root
