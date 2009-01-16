@@ -138,20 +138,20 @@ This package contains the argentinian grabbers for xmltv.
 #{_mandir}/man1/tv_grab_au*.1*
 #{_datadir}/xmltv/tv_grab_au/channel_ids
 
-%package	grabbers-be
-Summary:	Belgian grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#package	grabbers-be
+#Summary:	Belgian grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-be
-This package contains the belgian grabbers for xmltv.
+#description grabbers-be
+#This package contains the belgian grabbers for xmltv.
 
-%files grabbers-be
-%defattr(-,root,root)
-%{_bindir}/tv_grab_be
-%{_mandir}/man1/tv_grab_be*.1*
-%{_datadir}/xmltv/tv_grab_be/channel_ids_fr
-%{_datadir}/xmltv/tv_grab_be/channel_ids_nl
+#files grabbers-be
+#defattr(-,root,root)
+#{_bindir}/tv_grab_be
+#{_mandir}/man1/tv_grab_be*.1*
+#{_datadir}/xmltv/tv_grab_be/channel_ids_fr
+#{_datadir}/xmltv/tv_grab_be/channel_ids_nl
 
 %package	grabbers-br
 Summary:	Brazillian grabbers for xmltv
