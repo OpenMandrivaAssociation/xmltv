@@ -1,5 +1,5 @@
 %define name	xmltv
-%define version 0.5.54
+%define version 0.5.55
 %define release %mkrel 1
 
 Name:		%{name}
@@ -153,6 +153,7 @@ This package contains the argentinian grabbers for xmltv.
 #{_datadir}/xmltv/tv_grab_be/channel_ids_fr
 #{_datadir}/xmltv/tv_grab_be/channel_ids_nl
 
+%if 0
 %package	grabbers-br
 Summary:	Brazillian grabbers for xmltv
 Group:		Video
@@ -166,6 +167,7 @@ This package contains the brazillian grabbers for xmltv.
 #{_bindir}/tv_grab_br
 %{_bindir}/tv_grab_br_net
 %{_mandir}/man1/tv_grab_br*.1*
+%endif
 
 %package	grabbers-ch
 Summary:	Swiss grabbers for xmltv
@@ -322,6 +324,7 @@ Provides:	xmltv-grabbers
 
 %description grabbers-huro
 This package contains the hungarian-romanian grabbers for xmltv.
+It also includes Czech and Romanian support.
 
 %files grabbers-huro
 %defattr(-,root,root)
@@ -330,6 +333,9 @@ This package contains the hungarian-romanian grabbers for xmltv.
 %{_datadir}/xmltv/tv_grab_huro/jobmap
 %{_datadir}/xmltv/tv_grab_huro/catmap.hu
 %{_datadir}/xmltv/tv_grab_huro/catmap.ro
+%{_datadir}/xmltv/tv_grab_huro/catmap.cz
+%{_datadir}/xmltv/tv_grab_huro/catmap.sk
+
 
 #package	grabbers-il
 #Summary:	Israeli grabbers for xmltv
@@ -371,6 +377,7 @@ This package contains the italian grabbers for xmltv.
 %{_mandir}/man1/tv_grab_it*.1*
 %{_datadir}/xmltv/tv_grab_it*
 
+%if 0
 %package	grabbers-jp
 Summary:	Japanese grabbers for xmltv
 Group:		Video
@@ -383,6 +390,7 @@ This package contains the japanese grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_jp
 %{_mandir}/man1/tv_grab_jp.1*
+%endif
 
 %package	grabbers-na
 Summary:	North-american grabbers for xmltv
@@ -489,6 +497,7 @@ This package contains the english grabbers for xmltv.
 %{_mandir}/man1/tv_grab_uk*.1*
 %{_datadir}/xmltv/tv_grab_uk*
 
+%if 0
 %package	grabbers-za
 Summary:	South-African grabbers for xmltv
 Group:		Video
@@ -501,6 +510,7 @@ This package contains the south-african grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_za*
 %{_mandir}/man1/tv_grab_za*.1*
+%endif
 
 %package	gui
 Summary:	Graphical frontends to xmltv
