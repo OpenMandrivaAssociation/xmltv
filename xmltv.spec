@@ -1,5 +1,5 @@
 %define name	xmltv
-%define version 0.5.55
+%define version 0.5.56
 %define release %mkrel 1
 
 Name:		%{name}
@@ -497,7 +497,6 @@ This package contains the english grabbers for xmltv.
 %{_mandir}/man1/tv_grab_uk*.1*
 %{_datadir}/xmltv/tv_grab_uk*
 
-%if 0
 %package	grabbers-za
 Summary:	South-African grabbers for xmltv
 Group:		Video
@@ -510,7 +509,6 @@ This package contains the south-african grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_za*
 %{_mandir}/man1/tv_grab_za*.1*
-%endif
 
 %package	gui
 Summary:	Graphical frontends to xmltv
