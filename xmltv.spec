@@ -1,6 +1,6 @@
 %define name	xmltv
 %define version 0.5.56
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -19,6 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:	perl-DateManip => 5.42
+BuildRequires:	perl-DateTime-Format-Strptime
 BuildRequires:	perl-devel
 BuildRequires:	perl-HTML-LinkExtractor
 BuildRequires:	perl-HTML-TableExtract => 1.08
@@ -28,6 +29,7 @@ BuildRequires:	perl-IO-stringy
 BuildRequires:	perl-libwww-perl => 5.65
 BuildRequires:	perl-Lingua-Preferred
 BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
+BuildRequires:	perl-Linux-DVB
 BuildRequires:	perl-SOAP-Lite
 BuildRequires:	perl-Term-ProgressBar >= 2.03
 BuildRequires:	perl-Term-ReadKey
