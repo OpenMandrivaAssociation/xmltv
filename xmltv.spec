@@ -1,6 +1,6 @@
 %define name	xmltv
 %define version 0.5.56
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
@@ -12,6 +12,10 @@ Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch2:		xmltv-0.5.39-jp-utf8.patch
 Patch4:		xmltv-0.5.42-Makefile.patch
 Patch7:		xmltv-0.5.3-None.pm_strict.patch
+# add upstream patch to workaround broken tv_grab_na_dd.in due to latest
+# perl-Date-Manip changes, c.f. 
+# http://xmltv.cvs.sourceforge.net/viewvc/xmltv/xmltv/grab/na_dd/tv_grab_na_dd.in?r1=1.76&r2=1.77
+Patch8:		xmltv-0.5.56-fix-tv_grab_na_dd.in.patch
 License:	GPLv2+
 Group:		Video
 BuildArch:	noarch
@@ -548,6 +552,7 @@ Convert XML to the potatoe guide view tool.
 %patch2 -p0
 %patch4 -p0
 %patch7 -p1 -b .strict
+%patch8 -p0
 
 %build
 export PREFIX=/usr
