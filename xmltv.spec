@@ -1,6 +1,6 @@
 %define name	xmltv
-%define version 0.5.56
-%define release %mkrel 4
+%define version 0.5.59
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -12,10 +12,8 @@ Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch2:		xmltv-0.5.39-jp-utf8.patch
 Patch4:		xmltv-0.5.42-Makefile.patch
 Patch7:		xmltv-0.5.3-None.pm_strict.patch
-# add upstream patch to workaround broken tv_grab_na_dd.in due to latest
-# perl-Date-Manip changes, c.f. 
-# http://xmltv.cvs.sourceforge.net/viewvc/xmltv/xmltv/grab/na_dd/tv_grab_na_dd.in?r1=1.76&r2=1.77
-Patch8:		xmltv-0.5.56-fix-tv_grab_na_dd.in.patch
+Patch10:	xmltv-0.5.59-fix-tv_grab_fi.patch
+Patch11:	xmltv-0.5.59-noask.patch
 License:	GPLv2+
 Group:		Video
 BuildArch:	noarch
@@ -93,6 +91,7 @@ couple of backends to produce printed output.
 %{_mandir}/man1/tv_validate_file.1*
 %{_mandir}/man1/tv_validate_grabber.1*
 %{_datadir}/xmltv/xmltv.dtd
+%{_datadir}/xmltv/xmltv-lineup.dtd
 %{_docdir}/%{name}-%{version}
 
 %package -n	perl-XMLTV
@@ -126,9 +125,9 @@ This package contains the argentinian grabbers for xmltv.
 %files grabbers-ar
 %defattr(-,root,root)
 %{_bindir}/tv_extractinfo_ar
-%{_bindir}/tv_grab_ar
+#%{_bindir}/tv_grab_ar
 %{_mandir}/man1/tv_extractinfo_ar*.1*
-%{_mandir}/man1/tv_grab_ar*.1*
+#%{_mandir}/man1/tv_grab_ar*.1*
 
 #package	grabbers-au
 #Summary:	Australian grabbers for xmltv
@@ -187,7 +186,7 @@ This package contains the swiss grabbers for xmltv.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_ch_*
 %{_mandir}/man1/tv_grab_ch_*.1*
-%{_datadir}/xmltv/tv_grab_ch_*/channel_ids
+#%{_datadir}/xmltv/tv_grab_ch_*/channel_ids
 
 %package	grabbers-combiner
 Summary:	Grabber to grab data from multiple grabbers at once
@@ -201,7 +200,7 @@ This package contains a grabber to grab data from multiple grabbers at once.
 %defattr(-,root,root)
 %{_bindir}/tv_grab_combiner
 %{_mandir}/man1/tv_grab_combiner.1*
-%{_datadir}/xmltv/tv_grab_ch_*/channel_ids
+#%{_datadir}/xmltv/tv_grab_ch_*/channel_ids
 
 #package	grabbers-de
 #Summary:	German grabbers for xmltv
@@ -280,21 +279,21 @@ This package contains the european grabbers for xmltv.
 %files grabbers-eu
 %defattr(-,root,root)
 %{_bindir}/tv_grab_eu_epgdata
-%{_mandir}/man1/tv_grab_eu_epgdata.1.lzma
+%{_mandir}/man1/tv_grab_eu_epgdata.1*
 %{_datadir}/xmltv/tv_grab_eu_epgdata/channel_ids
 
 %package	grabbers-fi
-Summary:	Finish grabbers for xmltv
+Summary:	Finnish grabbers for xmltv
 Group:		Video
 Provides:	xmltv-grabbers
 
 %description grabbers-fi
-This package contains the finish grabbers for xmltv.
+This package contains the finnish grabbers for xmltv.
 
 %files grabbers-fi
 %defattr(-,root,root)
-%{_bindir}/tv_grab_fi
-%{_mandir}/man1/tv_grab_fi.1*
+%{_bindir}/tv_grab_fi*
+%{_mandir}/man1/tv_grab_fi*.1*
 
 %package	grabbers-fr
 Summary:	French grabbers for xmltv
@@ -343,18 +342,31 @@ It also includes Czech and Romanian support.
 %{_datadir}/xmltv/tv_grab_huro/catmap.sk
 
 
-#package	grabbers-il
-#Summary:	Israeli grabbers for xmltv
-#Group:		Video
-#Provides:	xmltv-grabbers
+%package	grabbers-il
+Summary:	Israeli grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
 
-#description grabbers-il
-#This package contains the israeli grabbers for xmltv.
+%description grabbers-il
+This package contains the israeli grabbers for xmltv.
 
-#files grabbers-il
-#defattr(-,root,root)
-#{_bindir}/tv_grab_il*
-#{_mandir}/man1/tv_grab_il*.1*
+%files grabbers-il
+%defattr(-,root,root)
+%{_bindir}/tv_grab_il*
+%{_mandir}/man1/tv_grab_il*.1*
+
+%package grabbers-in
+Summary:        Indian grabbers for xmltv
+Group:          Video
+Provides:	xmltv-grabbers
+
+%description grabbers-in
+This package contains the indian grabbers for xmltv.
+
+%files grabbers-in
+%defattr(-,root,root)
+%{_bindir}/tv_grab_in*
+%{_mandir}/man1/tv_grab_in*.1*
 
 %package	grabbers-is
 Summary:	Icelandic grabbers for xmltv
@@ -424,18 +436,18 @@ This package contains the north-american grabbers for xmltv.
 #{_bindir}/tv_grab_nc
 #{_mandir}/man1/tv_grab_nc.1*
 
-#%package	grabbers-nl
-#Summary:	Dutch grabbers for xmltv
-#Group:		Video
-#Provides:	xmltv-grabbers
+%package	grabbers-nl
+Summary:	Dutch grabbers for xmltv
+Group:		Video
+Provides:	xmltv-grabbers
 
-#description grabbers-nl
-#This package contains the dutch grabbers for xmltv.
+%description grabbers-nl
+This package contains the dutch grabbers for xmltv.
 
-#files grabbers-nl
-#defattr(-,root,root)
-#{_bindir}/tv_grab_nl*
-#{_mandir}/man1/tv_grab_nl*.1*
+%files grabbers-nl
+%defattr(-,root,root)
+%{_bindir}/tv_grab_nl*
+%{_mandir}/man1/tv_grab_nl*.1*
 
 %package	grabbers-no
 Summary:	Norwegian grabbers for xmltv
@@ -460,8 +472,8 @@ This package contains the portugese grabbers for xmltv.
 
 %files grabbers-pt
 %defattr(-,root,root)
-%{_bindir}/tv_grab_pt
-%{_mandir}/man1/tv_grab_pt.1*
+%{_bindir}/tv_grab_pt*
+%{_mandir}/man1/tv_grab_pt*.1*
 
 %package	grabbers-re
 Summary:	Reunion island grabbers for xmltv
@@ -552,22 +564,20 @@ Convert XML to the potatoe guide view tool.
 %patch2 -p0
 %patch4 -p0
 %patch7 -p1 -b .strict
-%patch8 -p0
+%patch10 -p0 -b .telkku
+%patch11 -p1 -b .noask
 
 %build
-export PREFIX=/usr
-%{__perl} Makefile.PL INSTALLDIRS=vendor 'PREFIX=$(MYDESTDIR)'%{_prefix} <<EOF
-yes
-EOF
+%{__perl} Makefile.PL INSTALLDIRS=vendor
 
-%{__make}
-#make test
+%make
+
+%check
+%make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
-
-
+rm -rf %{buildroot}
