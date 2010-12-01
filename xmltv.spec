@@ -20,6 +20,7 @@ BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
+BuildRequires:  perl-Data-Dump
 BuildRequires:	perl-DateManip => 5.42
 BuildRequires:	perl-DateTime-Format-Strptime
 BuildRequires:	perl-devel
@@ -32,11 +33,12 @@ BuildRequires:	perl-libwww-perl => 5.65
 BuildRequires:	perl-Lingua-Preferred
 BuildRequires:	perl-Lingua-EN-Numbers-Ordinate
 BuildRequires:	perl-Linux-DVB
+BuildRequires:	perl-Parse-RecDescent
 BuildRequires:	perl-SOAP-Lite
 BuildRequires:	perl-Term-ProgressBar >= 2.03
 BuildRequires:	perl-Term-ReadKey
-#BuildRequires:	perl-Text-Bidi
 BuildRequires:	perl-Text-Kakasi
+BuildRequires:	perl-TimeDate
 BuildRequires:	perl-Tk-TableMatrix
 BuildRequires:	perl-Unicode-String
 BuildRequires:	perl-Unicode-UTF8simple
