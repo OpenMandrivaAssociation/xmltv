@@ -1,6 +1,6 @@
 %define name	xmltv
 %define version 0.5.59
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -570,7 +570,7 @@ Convert XML to the potatoe guide view tool.
 %patch11 -p1 -b .noask
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%{__perl} Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix}
 
 %make
 
