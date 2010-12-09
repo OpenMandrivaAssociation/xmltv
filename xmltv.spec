@@ -1,17 +1,16 @@
 %define name	xmltv
 %define version 0.5.59
-%define release %mkrel 2
+%define release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	A set of utilities to manage your TV viewing
-#URL:		http://membled.com/work/apps/xmltv/
 URL:		http://wiki.xmltv.org
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-Patch2:		xmltv-0.5.39-jp-utf8.patch
-Patch4:		xmltv-0.5.42-Makefile.patch
-Patch7:		xmltv-0.5.3-None.pm_strict.patch
+Patch2:		xmltv-0.5.59-jp-utf8.patch
+Patch4:		xmltv-0.5.59-Makefile.patch
+Patch7:		xmltv-0.5.59-None.pm_strict.patch
 Patch10:	xmltv-0.5.59-fix-tv_grab_fi.patch
 Patch11:	xmltv-0.5.59-noask.patch
 License:	GPLv2+
@@ -92,6 +91,7 @@ couple of backends to produce printed output.
 %{_mandir}/man1/tv_to_text.1*
 %{_mandir}/man1/tv_validate_file.1*
 %{_mandir}/man1/tv_validate_grabber.1*
+%dir %{_datadir}/xmltv/
 %{_datadir}/xmltv/xmltv.dtd
 %{_datadir}/xmltv/xmltv-lineup.dtd
 %{_docdir}/%{name}-%{version}
