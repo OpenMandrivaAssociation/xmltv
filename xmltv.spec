@@ -1,6 +1,6 @@
 %define name	xmltv
 %define version 0.5.59
-%define release %mkrel 3
+%define release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
@@ -8,10 +8,12 @@ Release:	%{release}
 Summary:	A set of utilities to manage your TV viewing
 URL:		http://wiki.xmltv.org
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
+# From upstream cvs:
+# http://xmltv.cvs.sourceforge.net/viewvc/xmltv/xmltv/grab/fi/tv_grab_fi?revision=1.65
+Source1:	tv_grab_fi
 Patch2:		xmltv-0.5.59-jp-utf8.patch
 Patch4:		xmltv-0.5.59-Makefile.patch
 Patch7:		xmltv-0.5.59-None.pm_strict.patch
-Patch10:	xmltv-0.5.59-fix-tv_grab_fi.patch
 Patch11:	xmltv-0.5.59-noask.patch
 License:	GPLv2+
 Group:		Video
@@ -566,8 +568,10 @@ Convert XML to the potatoe guide view tool.
 %patch2 -p0
 %patch4 -p0
 %patch7 -p1 -b .strict
-%patch10 -p0 -b .telkku
 %patch11 -p1 -b .noask
+
+#latest (and hopefully working) tv_grab_fi from upstream CVS
+cp -rf %{SOURCE1} grab/fi/tv_grab_fi
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix}
