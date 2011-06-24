@@ -1,16 +1,9 @@
-%define name	xmltv
-%define version 0.5.59
-%define release %mkrel 4
-
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		xmltv
+Version:	0.5.61
+Release:	%mkrel 1
 Summary:	A set of utilities to manage your TV viewing
 URL:		http://wiki.xmltv.org
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
-# From upstream cvs:
-# http://xmltv.cvs.sourceforge.net/viewvc/xmltv/xmltv/grab/fi/tv_grab_fi?revision=1.65
-Source1:	tv_grab_fi
 Patch2:		xmltv-0.5.59-jp-utf8.patch
 Patch4:		xmltv-0.5.59-Makefile.patch
 Patch7:		xmltv-0.5.59-None.pm_strict.patch
@@ -18,7 +11,6 @@ Patch11:	xmltv-0.5.59-noask.patch
 License:	GPLv2+
 Group:		Video
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:  perl-Data-Dump
@@ -51,6 +43,7 @@ BuildRequires:	perl-XML-Simple
 BuildRequires:	perl-XML-Twig => 3.09
 BuildRequires:	perl-XML-Writer >= 0.4.6
 Requires:	perl-HTML-Parser >= 3.34
+Obsoletes:	%{name}-grabbers-re < %{version}-%{release}
 
 %description
 XMLTV is a set of utilities to manage your TV viewing. They work with
@@ -69,6 +62,7 @@ couple of backends to produce printed output.
 
 %files
 %defattr(-,root,root)
+%doc %{_docdir}/%{name}-%{version}
 %{_bindir}/tv_cat
 %{_bindir}/tv_extractinfo_en
 %{_bindir}/tv_find_grabbers
@@ -96,7 +90,6 @@ couple of backends to produce printed output.
 %dir %{_datadir}/xmltv/
 %{_datadir}/xmltv/xmltv.dtd
 %{_datadir}/xmltv/xmltv-lineup.dtd
-%{_docdir}/%{name}-%{version}
 
 %package -n	perl-XMLTV
 Summary:	Perl modules for managing your TV viewing
@@ -129,9 +122,9 @@ This package contains the argentinian grabbers for xmltv.
 %files grabbers-ar
 %defattr(-,root,root)
 %{_bindir}/tv_extractinfo_ar
-#%{_bindir}/tv_grab_ar
+%{_bindir}/tv_grab_ar
 %{_mandir}/man1/tv_extractinfo_ar*.1*
-#%{_mandir}/man1/tv_grab_ar*.1*
+%{_mandir}/man1/tv_grab_ar*.1*
 
 #package	grabbers-au
 #Summary:	Australian grabbers for xmltv
@@ -311,7 +304,8 @@ This package contains the french grabbers for xmltv.
 %files grabbers-fr
 %defattr(-,root,root)
 %{_bindir}/tv_grab_fr
-%{_mandir}/man1/tv_grab_fr.1*
+%{_bindir}/tv_grab_fr_kazer
+%{_mandir}/man1/tv_grab_fr*.1*
 
 %package	grabbers-hr
 Summary:	Croatia grabbers for xmltv
@@ -479,18 +473,18 @@ This package contains the portugese grabbers for xmltv.
 %{_bindir}/tv_grab_pt*
 %{_mandir}/man1/tv_grab_pt*.1*
 
-%package	grabbers-re
-Summary:	Reunion island grabbers for xmltv
-Group:		Video
-Provides:	xmltv-grabbers
+#%package	grabbers-re
+#Summary:	Reunion island grabbers for xmltv
+#Group:		Video
+#Provides:	xmltv-grabbers
 
-%description grabbers-re
-This package contains the Reunion Island (France) grabbers for xmltv.
+#%description grabbers-re
+#This package contains the Reunion Island (France) grabbers for xmltv.
 
-%files grabbers-re
-%defattr(-,root,root)
-%{_bindir}/tv_grab_re*
-%{_mandir}/man1/tv_grab_re*.1*
+#%files grabbers-re
+#%defattr(-,root,root)
+#%{_bindir}/tv_grab_re*
+#%{_mandir}/man1/tv_grab_re*.1*
 
 %package	grabbers-se
 Summary:	Swedish grabbers for xmltv
@@ -569,9 +563,6 @@ Convert XML to the potatoe guide view tool.
 %patch4 -p0
 %patch7 -p1 -b .strict
 %patch11 -p1 -b .noask
-
-#latest (and hopefully working) tv_grab_fi from upstream CVS
-cp -rf %{SOURCE1} grab/fi/tv_grab_fi
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor PREFIX=%{_prefix}
