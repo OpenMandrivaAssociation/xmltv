@@ -1,0 +1,19 @@
+The -C option on shebang line is forbidden in 5.8.7 (perbug #34087)
+
+--- grab/jp/tv_grab_jp.orig	2005-05-30 08:45:16.950672415 +0200
++++ grab/jp/tv_grab_jp	2005-05-30 08:46:05.621635450 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w -C
++#!/usr/bin/perl -w
+ 
+ =pod
+ 
+@@ -101,6 +101,8 @@
+ use Encode qw(from_to);
+ use Encode::JP;
+ 
++BEGIN { binmode STDOUT, ":utf8" }
++
+ # Todo: perhaps we should internationalize messages and docs?
+ use XMLTV::Usage <<END
+ $0: get Japanese television listings in XMLTV format
