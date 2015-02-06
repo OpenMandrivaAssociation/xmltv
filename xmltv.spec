@@ -1,6 +1,6 @@
 Name:		xmltv
 Version:	0.5.61
-Release:	%mkrel 1
+Release:	2
 Summary:	A set of utilities to manage your TV viewing
 URL:		http://wiki.xmltv.org
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
