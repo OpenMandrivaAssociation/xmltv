@@ -2,7 +2,7 @@ Name:		xmltv
 Version:	0.5.61
 Release:	2
 Summary:	A set of utilities to manage your TV viewing
-URL:		http://wiki.xmltv.org
+URL:		https://wiki.xmltv.org
 Source0:	http://prdownloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch2:		xmltv-0.5.59-jp-utf8.patch
 Patch4:		xmltv-0.5.59-Makefile.patch
