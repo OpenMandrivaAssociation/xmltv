@@ -11,6 +11,7 @@ Patch11:	xmltv-0.5.59-noask.patch
 License:	GPLv2+
 Group:		Video
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-Archive-Zip
 BuildRequires:	perl-CGI
 BuildRequires:  perl-Data-Dump
